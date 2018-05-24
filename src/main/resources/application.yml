@@ -1,0 +1,22 @@
+spring:
+  rabbitmq:
+    host: localhost
+    cache:
+      channel:
+        size: 25
+    username: gao
+    password: gao
+    port: 5674
+    virtual-host: /
+    template:
+      retry:
+        max-attempts: 5
+    publisher-confirms: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        #max-interval: 50000
+        #initial-interval: 30000
+
+server:
+  port: 9090
